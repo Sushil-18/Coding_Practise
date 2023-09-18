@@ -18,12 +18,12 @@ class Reverse {
 public class ReverseArray {
     public static void main(String args[]) {
         Reverse obj = new Reverse();
-        int[] array = { 1, 2, 3, 4, 5 };
+        int[] arr = { 1, 2, 3, 4, 5 };
         int start = 0;
-        int end = array.length - 1;
+        int end = arr.length - 1;
         //Dynamic way to initialize an array 
         // int[] array = new int[size]; size is number of elements in array
-        obj.reverse(array, start, end);
-        obj.print(array);
+        obj.reverse(arr, start, end);
+        obj.print(arr);
     }
 }
