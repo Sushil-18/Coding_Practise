@@ -9,10 +9,9 @@ public class Insertation {
 
     public static void sort(int[] arr, int len){
         for(int i=0 ; i <= len - 1; i++){
-
             for(int j = i; j > 0 ; j--){
                 if(arr[j-1] > arr[j]){
-                    arr[j-1] = arr[j-1] + arr[j];
+                arr[j-1] = arr[j-1] + arr[j];
                 arr[j] = arr[j-1] - arr[j];
                 arr[j-1] = arr[j-1] - arr[j];
                 }
