@@ -6,22 +6,30 @@ public class RightRotateByNum {
             /* Collections.swap(arr, start, end);
             start += 1;
             end -= 1; */
+            //Swapping two numbers in arraylist without using inbuild method or third variable
             arr.set(start,arr.set(end,arr.get(start)));
             start += 1;
             end -= 1;
         }
     }
     public void rotateByNumber(List<Integer> arr, int num){
+
+        /* If you want to rotate the array from right then reverse the array from the start till length - numByWhichToRotate 
+        then reverse the remaining array after that reverse the whole array */
+
+        /* If you want to rotate the array from left then reverse the array from length-1 to numByWhichToRotate  then
+          reverse the remaining array afte that reverse the whole array
+        */
         int length = arr.size();
 
         if(length <= 1 || num > length){
             return;
         }
-
+        //reverse the array from o to length - num - 1
         reverse(arr, 0, length - num -1);
-
+        //reverse the array from length-num to length - 1
         reverse(arr,length-num, length-1);
-
+        ////reverse the array from o to length - 1
         reverse(arr, 0, length-1);
         
     }
