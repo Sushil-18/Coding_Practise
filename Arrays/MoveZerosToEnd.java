@@ -2,12 +2,17 @@ import java.util.*;
 
 public class MoveZerosToEnd {
     public void moveZeros(List<Integer> arr){
-        int length = arr.size();
-        for(int i=0; i< length-1; i++){
-             int j = i + 1;
-            if(arr.get(i) == 0 && arr.get(j) !=0 ){
-                Collections.swap(arr, i, j);
-            } 
+        int j = 0;
+        for(Integer element : arr){
+            if(element != 0){
+                /* Collections.swap takes 3 parameters 
+                 1.The list on which swap will be used
+                 2.The index of element which will be swapped
+                 3.The index of second element which will be swapped
+                */
+                Collections.swap(arr,arr.indexOf(element) , j);
+                j++;
+            }
         }
     }
     public static void main(String args[]){
