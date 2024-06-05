@@ -1,6 +1,8 @@
 //Finding the missing number from an array
 //Problem Statement - Given an integer N and an array of size N-1 containing N-1 numbers between 1 to N.
 //Find the number(between 1 to N), that is not present in the given array.
+//Additionally we use XOR approach to solve this problem
+//XOR of same numbers results in zero value
 import java.util.*;
 public class FindMissingNumber {
     public int findNumber(List<Integer> arr, int num){
