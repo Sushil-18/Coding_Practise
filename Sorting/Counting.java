@@ -19,7 +19,7 @@ public class Counting {
 
         int[] outputArray = new int[arr.length];
 
-        for (int i = arr.length - 1; i >= 0; i--) {
+        for (int i = arr.length - 1; i >= 0; i--) { // inportant calculation part of counting sort
             if (countingArray[arr[i]] > 0) {
                 outputArray[countingArray[arr[i]] - 1] = arr[i];
                 countingArray[arr[i]]--;
@@ -27,7 +27,7 @@ public class Counting {
         }
         System.out.println("Array after sorting");
         for (int element : outputArray) {
-            System.out.println(element);
+            System.out.print(" " + element);
         }
     }
 
@@ -36,7 +36,7 @@ public class Counting {
 
         System.out.println("Array before sorting");
         for (int element : arr) {
-            System.out.println(element);
+            System.out.print(" " + element);
         }
         countingSort(arr);
     }
