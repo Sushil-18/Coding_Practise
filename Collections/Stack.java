@@ -1,29 +1,24 @@
 import java.util.*;
 public class Stack {
     public static void main(String args[]){
+        Deque<Integer> stack = new ArrayDeque<>();
 
-        Queue<Integer> queue = new LinkedList<>();
+        stack.push(45);
+        stack.push(64);
+        stack.push(82);
+        stack.push(90);
+        stack.push(18);
 
-        queue.offer(2);
-        queue.offer(64);
-        queue.offer(93);
-        queue.offer(99);
-        queue.offer(46);
+        for(Integer element : stack){
+            System.out.println(element);
+        }
 
-        System.out.println("Queue before removal of head");
+        System.out.println("poping the head of the stack"+ stack.pop());
 
-        System.out.println(queue);
+        System.out.println("Stack after pop operation");
 
-        Integer element = queue.peek();
-        System.out.println(element);
-
-        queue.poll();
-
-        System.out.println("Queue after removal of head");
-        System.out.println(queue);
-
-        for(Integer e : queue){    // we can iterator for all the collection interfaces and for-each loop is shorthand for iterator
-            System.out.println(e);
+         for(Integer element : stack){
+            System.out.println(element);
         }
     }
 }
