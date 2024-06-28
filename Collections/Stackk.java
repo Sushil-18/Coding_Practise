@@ -1,7 +1,14 @@
 import java.util.*;
-public class Stack {
+public class Stackk {
     public static void main(String args[]){
-        Deque<Integer> stack = new ArrayDeque<>();
+       /*  Deque<Integer> stack = new ArrayDeque<>();
+
+        stack.push(45);
+        stack.push(64);
+        stack.push(82);
+        stack.push(90);
+        stack.push(18); */
+        Stack<Integer> stack = new Stack<>();
 
         stack.push(45);
         stack.push(64);
