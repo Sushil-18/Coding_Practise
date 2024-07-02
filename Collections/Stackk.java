@@ -8,7 +8,7 @@ public class Stackk {
         stack.push(82);
         stack.push(90);
         stack.push(18); */
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>(); // to implemen stack Stack class should be used though we can implement it using deque i.e doubly ended queue
 
         stack.push(45);
         stack.push(64);
