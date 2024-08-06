@@ -1,4 +1,5 @@
 import java.util.*;
+//Always implement hashcode and equals method for the custom HashSet or we will end up creating a bug,
 
 class Hashsett {
 

@@ -1,4 +1,7 @@
 import java.util.*;
+//LinkedHashset keeps the elelment in order which they are inserted, 
+//but it reduces performance compaired to HashSet because of it maintains linkedlist for ordering 
+//although the time complexity it same
 
 class LinkedHashsett {
 
