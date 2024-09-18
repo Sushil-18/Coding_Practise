@@ -5,21 +5,21 @@ class MinDifferenceInMinutes{
         int min = Integer.MAX_VALUE;
         List<Integer> timeInMinutes = new ArrayList<>();
 
-        //converting 
+        //converting time into integers
         for(String time : tp){
-            int hours = (10 * (time.charAt(0) - '0') + (time.charAt(1) - '0'));
-            int minutes = (10* (time.charAt(3)-'0')+(time.charAt(4) - '0'));
-            timeInMinutes.add(60*hours + minutes);
+            int hours = (10 * (time.charAt(0) - '0') + (time.charAt(1) - '0'));  //taking hours from string
+            int minutes = (10* (time.charAt(3)-'0')+(time.charAt(4) - '0')); //taking minutes from string
+            timeInMinutes.add(60*hours + minutes); //calculating total minutes and adding them into list
         }
 
-        Collections.sort(timeInMinutes);
+        Collections.sort(timeInMinutes);  // sorting list
 
-        int size = timeInMinutes.size();
-
+        int size = timeInMinutes.size();  
+        //checking the difference between subsequent elements and returning least difference.
         for(int i = 1 ; i < size ; i++){
             min = Math.min(timeInMinutes.get(i) - timeInMinutes.get(i-1), min);
         }
-
+        //checking first and last elements in list to satisfy the edge case
         min = Math.min(min, 1440 - timeInMinutes.get(size-1) - timeInMinutes.get(0));
         return min;
     }
