@@ -1,8 +1,8 @@
-package String;
+
 
 class Solution {
     public char findTheDifference(String s, String t) {
-        int num1= 0;
+       /*  int num1= 0;
         int num2 = 0;
 
         for(int i = 0; i < s.length(); i++){
@@ -12,7 +12,18 @@ class Solution {
             num2 += (int)t.charAt(j);
         }
 
-        return (char)(num2 - num1);
+        return (char)(num2 - num1); */
+
+        char result = 0;
+
+        for(int i = 0; i < s.length() ; i++){
+            result ^= s.charAt(i);
+        }
+        for(int i = 0; i < t.length() ; i++){
+            result ^= t.charAt(i);
+        }
+
+        return result;
     }
 }
 
